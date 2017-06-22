@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/zhuce.css" />
+		<script type="text/javascript" src="js/jquery-3.1.1.js" ></script>
+	</head>
+	<body>
+		<div class="zhu">
+			<div class="shen">
+				<div class="tubiao">
+					<img src="img/1_07.jpg" />
+				</div>
+				<p>注册小米账号</p>
+				<form>
+					<input class="val1" type="text" placeholder="请输入手机号"/>
+					<input class="val2" type="password" placeholder="密码"/>
+					<input type="text" placeholder="图片验证码" name='c'>
+					<img src="img/78.jpg" class="mi"/>
+					<input class="val3" type="button" value="立即注册"/>
+				</form>
+				<p>
+					点击“立即注册”，即表示您同意并愿意遵守小米
+					<span style="color:black;">用户协议</span> 和 
+					<span style="color:black;">隐私政策</span>
+				</p>
+			</div>
+			<div class="di">
+				<div class="shang">
+					<li>简体</li>
+					<li>繁体</li>
+					<li>English</li>
+					<li>常见问题</li>
+				</div>
+				<p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+			</div>
+		</div>
+	</body>
+	<script>
+		$('input').focus(function(){
+	    	$('input').css('border','').eq($(this).index()).css('border','1px solid red')
+	    })
+		var ipt1=document.querySelector('.val1')
+		var ipt2=document.querySelector('.val2')
+		var ipt3=document.querySelector('.val3')
+		ipt3.onclick = function(){
+			var user=ipt1.value;
+			var pswd=ipt2.value;
+			$.ajax({
+				type:"post",
+				url:"js/02zhuce1.php",
+				dataType:"json",
+				data:{
+					name:'张三',
+					old:34,
+					sex:1,
+					user:user,
+					pswd:pswd,
+					phone:12345678901,
+				},
+				async:true,
+				success:function(data){
+					console.log(data);
+					if(data.status==2){
+						alert("√注册成功");
+					}
+				}
+			});
+		}
+	</script>
+</html>

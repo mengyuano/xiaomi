@@ -1,0 +1,56 @@
+.tu113{
+	width:100%;
+}
+.tu113 img{
+	width:100%;
+}
+.mi,.mi1,.mi2{
+	width:100%;
+	height:800px;
+	background: url(../img/67.jpg) no-repeat;
+	background-size:cover;
+	padding-top:50px;
+}
+.mi p{
+	text-align: center;
+	margin-top:10px;
+}
+.mi p:nth-child(1){
+	font-size: 45px;
+}
+.mi1{
+	background: url(../img/68.jpg) no-repeat;
+	background-size:cover;
+}
+.mi1 p:nth-child(1){
+	width:17%;
+	font-size: 35px;
+	margin:400px 100px;
+	margin-bottom: 0;
+}
+.mi1 p:nth-child(2),.mi1 p:nth-child(3){
+	margin:30px 100px;
+}
+.mi1 p:nth-child(3),.mi2 p:nth-child(2){
+	width:17%;
+	height:50px;
+	border:1px solid black;
+	text-align: center;
+	line-height: 50px;
+}
+.mi2{
+	background: url(../img/69.jpg) no-repeat;
+	background-size:cover;
+	height:700px;
+}
+.mi2 p:nth-child(1){
+	font-size: 35px;
+	margin:100px 150px;
+}
+.mi2 p:nth-child(2){
+	margin:400px 150px;
+}
+.mi2 p:nth-child(2):hover,.mi1 p:nth-child(3):hover{
+	background:black;
+	color:white;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			ul {
+				float: left;
+				margin-right: 20px;
+				margin-top: 20px;
+			}
+			li {
+				list-style: none;
+			}
+			img {
+				width: 200px;
+				height: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--<ul>
+			<li><img src=""/></li>
+			<li>商品名称:</li>
+			<li>商品属性:</li>
+			<li>商品价格:</li>
+			<li>商品商家:</li>
+			<li>商品销量:</li>
+		</ul>-->
+	</body>
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		var body = document.querySelector("body");
+		var div = document.querySelector("div");
+		
+		body.onload = function(){
+			$.ajax({
+				type:"post",
+				url:"04index0.php",
+				dataType:"json",
+				async:true,
+				success:function(data){
+					console.log(data);
+					var str = "";
+					for(var i=0;i<data.length;i++){
+						str += '<ul>'+
+									'<li><img src="upload/'+data[i].imgurl+'"/></li>'+
+									'<li>商品名称:'+data[i].name+'</li>'+
+									'<li>商品属性:'+data[i].shuxing+'</li>'+
+									'<li>商品价格:'+data[i].money+'</li>'+
+									'<li>商品商家:'+data[i].merchant+'</li>'+
+									'<li>商品销量:'+data[i].number+'</li>'+
+								'</ul>'
+					}
+					body.innerHTML = str;
+				}
+			});
+		}
+		
+		
+	</script>
+</html>

@@ -1,0 +1,135 @@
+*{
+	margin:0;
+	padding:0;
+}
+.deng{
+	width:100%;
+	height:700px;
+}
+.biao{
+	width:100%;
+	height:100px;
+}
+.biao img{
+	width:232px;
+	height:85px;
+	margin:10px 100px;
+}
+.na a{
+	text-decoration: none;
+	color:white;
+}
+.na a:hover{
+	color:white;
+}
+.kuang{
+	width:100%;
+	height:600px;
+	background: url(../img/50.png);
+	position: relative;
+}
+.biaodan{
+	width:26%;
+	height:76%;
+	position: absolute;
+	right:100px;
+	top:10%;
+	background:white;
+	padding:2%;
+	display: none;
+}
+.biaodan:nth-child(1){
+	display: block;
+}
+.biaodan>p{
+	text-align: center;
+	font-size: 14px;
+}
+.denglu{
+	width:100%;
+}
+.denglu p{
+	float: left;
+	width:50%;
+	box-sizing: border-box;
+	border-right: 1px solid black;
+	font-size: 26px;
+	text-align: center;
+}
+.denglu p:nth-child(1){
+	color:#f56600;
+}
+.denglu p:hover{
+	color:#f56600;
+}
+.biaodan input{
+	width:100%;
+	height:50px;
+	margin-top:30px;
+	outline: none;
+	padding-left:5%;
+	box-sizing: border-box;
+}
+.wangji{
+	width:60%;
+	margin:20px auto
+}
+.wangji p{
+	font-size: 14px;
+	float: left;
+	padding-left:10px;
+	padding-right:10px;
+}
+.wangji p:nth-child(1){
+	border-right: 1px solid gray;
+}
+.class{
+	color:#f56600;
+}
+.wangji p a{
+	text-decoration: none;
+	color:gray;
+}
+.wangji p a:hover{
+	color:#f56600;
+}
+.biaodan img{
+	width:100%;
+}
+.tu{
+	width:60%;
+	margin:10% 20%;
+}
+.di{
+	width:100%;
+	height:100px;
+}
+.bo{
+	width:20%;
+	height:30px;
+	margin:70px auto;
+	margin-bottom:0;
+}
+.bo li{
+	list-style: none;
+	padding-left:10px;
+	padding-right:10px;
+	border-right: 1px solid black;
+	float: left;
+	font-size: 14px;
+}
+.di p{
+	width:100%;
+	height:30px;
+	text-align: center;
+	font-size: 14px;
+}
+.na{
+	width:100%;
+	height:100%;
+	text-align: center;
+	line-height: 50px;
+	color:white;
+	background:orange;
+	margin-top:20px;
+}

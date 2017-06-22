@@ -1,0 +1,348 @@
+
+.zhu{
+	width:90%;
+	height:450px;
+	margin:auto;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 2px 2px 10px #ccc;
+}
+.zhu_left,.zhu_right{
+	width:20%;
+	height:100%;
+	background:#5c5c5e;
+	float: left;
+}
+.zhu_left li{
+	width:100%;
+	height:10%;
+	list-style: none;
+	text-indent: 2em;
+	line-height:45px;
+	color:white;
+	position: relative;
+	font-size: 14px;
+}
+.zhu_left li p{
+	float: right;
+	margin-right:20px;
+	font-size: 25px;
+	color:#ccc;
+}
+.zhu_right{
+	width:80%;
+	position: relative;
+}
+.btn,.btn1{
+	width:40px;
+	height:60px;
+	position: absolute;
+	top:205px;
+	text-align: center;
+	line-height: 55px;
+	color:#ccc;
+	font-size: 40px;
+}
+.btn{
+	left:0;
+}
+.btn1{
+	right:0;
+}
+.an{
+	width:140px;
+	height:20px;
+	position: absolute;
+	right:30px;
+	bottom: 30px;
+}
+.an1{
+	width:20px;
+	height:20px;
+	background:gray;
+	margin-left:10px;
+	float: left;
+	border-radius: 50%;
+}
+.tu3{
+	width:100%;
+	height:100%;
+	position: absolute;
+	display: none;
+}
+.tu3 img{
+	width:100%;
+	height:100%;
+}
+.tu4{
+	position:absolute;
+	top:0;
+	left:20%;
+	z-index: 10;
+	display: none;
+	box-shadow: 2px 2px 10px #ccc;
+}
+.zhu1{
+	width:90%;
+	margin:auto;
+	height:170px;
+	margin-top:10px;
+}
+.zhu1_left,.zhu1_right{
+	width:20%;
+	height:100%;
+	float: left;
+}
+.zhu1_right{
+	width:79%;
+	margin-left:1%;
+	display:flex;
+}
+.right1{
+	flex: 1;
+	width:33%;
+	height:100%;
+	margin-left:10px;
+	background: red;
+}
+.right1 img{
+	width:100%;
+	height:100%;
+}
+.zhu1_left{
+	background:#5f5750;
+}
+.ju{
+	width:90%;
+	height:90%;
+	margin: 5%;
+}
+.ju li{
+	list-style: none;
+}
+.ming{
+	width:90%;
+	height:60px;
+	margin:10px auto;	
+}
+
+.ming p{
+	line-height: 60px;
+	font-size: 20px;
+	float: left;
+}
+.ming_right{
+	float: right;
+}
+.ming_right p{
+	width:40px;
+	height:30px;
+	border:1px solid black;
+	text-align: center;
+	line-height: 30px;
+	font-size: 30px;
+	margin-top:30px;
+}
+.ming_right p:hover{
+	color:orangered;
+}
+.bao{
+	width:90%;
+	height:340px;
+	margin: auto;
+	overflow: hidden;
+	position: relative;
+}
+.ming_tu{
+	width:2440px;
+	height:100%;
+	display: flex;
+	position: absolute;
+}
+.tu11{
+	flex:1;
+	height:100%;
+	margin-left:10px;
+	background: #f5f5f5;
+}
+.tu11:nth-child(1){
+	border-top:1px solid red;
+}
+.tu11:nth-child(2){
+	border-top:1px solid yellow;
+}
+.tu11:nth-child(3){
+	border-top:1px solid blue;
+}
+.tu11:nth-child(4){
+	border-top:1px solid pink;
+}
+.tu11:nth-child(5){
+	border-top:1px solid green;
+}
+.tu11:nth-child(6){
+	border-top:1px solid red;
+}
+.tu11:nth-child(7){
+	border-top:1px solid yellow;
+}
+.tu11:nth-child(8){
+	border-top:1px solid blue;
+}
+.tu11:nth-child(9){
+	border-top:1px solid pink;
+}
+.tu11:nth-child(10){
+	border-top:1px solid green;
+}
+.tu11 img{
+	width:40%;
+	margin-top:20%;
+	margin-left:30%;
+	margin-bottom: 20%;
+}
+.tu11 p,.tu12 p{
+	font-size: 12px;
+	text-align: center;
+}
+.tu11 p:nth-child(4){
+	margin-top:20px;
+	color:orangered;
+}
+.tu12 p:nth-child(3){
+	color:gray;
+	margin-top:10px;
+}
+.tu12 p:nth-child(4){
+	margin-top:10px;
+	color:orangered;
+}
+.jia{
+	width:100%;
+	background: #F5F5F5;
+	margin-top:20px;
+}
+.dian,.dian1{
+	width:90%;
+	height:60px;
+	margin:auto;
+}
+.dian p,.dian1 p{
+	font-size: 20px;
+	float: left;
+	margin-top:30px;
+	line-height: 30px;
+	transition: all 0.2s;
+}
+.dian_right p:hover,.dian_right1 p:hover{
+	color:orangered;
+	border-bottom: 2px solid orangered;
+}
+.dian_right,.dian_right1{
+	float: right;
+}
+.dian_right p,.dian_right1 p{
+    margin-left:20px;
+	font-size: 16px;
+	text-align: center;
+}
+.jiadian,.jiadian1{
+	width:90%;
+	height:614px;
+	margin:30px auto;
+}
+.jiadian_left{
+	width:20%;
+	height:100%;
+	float:left;
+	transition: all 0.5s;
+}
+.jiadian_left img{
+	width:100%;
+	height:100%;
+}
+.jiadian_left:hover{
+	box-shadow: 2px 2px 10px gray;
+}
+.jiadian_right,.jiadian_right1{
+	width:80%;
+	height:100%;
+	float: right;
+	display: none;
+}
+.jiadian_right:nth-child(2){
+	display: block;
+}
+.jiadian_right1:nth-child(2){
+	display: block;
+}
+.tu12{
+	width:24%;
+	height:300px;
+	background:white;
+	float: left;
+	margin-left:1%;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.5s;
+}
+.tu12 img{
+	width:60%;
+	margin-left:20%;
+	margin-bottom: 5%;
+}
+.tu12:before{
+	content: '很漂亮的电视，操作也很方便。一直信赖与小米和小米妹子';
+	display: block;
+	width:90%;
+	color:white;
+	height:70px;
+	background:orange;
+	position: absolute;
+	top:100%;
+	transition: all 0.5s;
+	font-size:14px;
+	text-align: center;
+	padding:5%;
+}
+.tu12:hover:before{
+	top:230px;
+}
+.tu12:hover{
+	box-shadow: 2px 2px 10px gray;
+	transform: translateY(-3px);
+}
+.we{
+	width:20%;
+	height:100%;
+	float: left;
+}
+.we1{
+	width:100%;
+	height:302px;
+	margin-top:4%;
+	transition: all 0.5s;
+}
+.we1 img{
+	width:100%;
+	height:100%;
+}
+.we1:hover{
+	box-shadow: 2px 2px 10px gray;
+}
+.tuii{
+	width:100%;
+}
+.tuii img{
+	width:100%;
+}
+
+
+
+
+
+
+
+
+
+

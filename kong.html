@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.a{
+				width:280px;
+				height:400px;
+				margin-top:10px;
+				float: left;
+			}
+			.a img{
+				width:100%;
+				height:100%;
+			}
+			.tupain{
+				width:90%;
+				height:60%;
+				margin: auto;	
+			}
+			.dianpu{
+				width:90%;
+				margin: auto;
+				font-size: 14px;
+				color:orange;
+				font-size: 20px;
+
+			}
+			.he{
+				width:90%;
+				height:40px;
+				margin: auto;
+			}
+			.jinqian,.yimai{
+				margin-top:20px;
+				width:55%;
+				height:100%;
+				float: left;
+				font-size: 22px;
+				line-height: 40px;
+				color:red;
+			}
+			.yimai{
+				width:40%;
+				float: right;
+				font-size: 16px;
+				text-align: right;
+				color: black;
+			}
+			.shang{
+				width:90%;
+				height:30px;
+				margin:10px auto;
+			}
+		</style>
+	</head>
+	<body>
+		
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.js" ></script>
+	<script>
+		var body = document.querySelector("body");
+		body.onload=function(){
+			$.ajax({
+				type:"post",
+				url:'js/04index0.php',
+				dataType:'json',
+				async:true,
+				success:function(data){
+					console.log(data);
+					var ty='';
+					for(var i=0;i<data.length;i++){
+						ty+='<div class="a">'+
+								'<div class="tupain"><img src="js/upload/'+data[i].imgurl+'"></div>'+
+								'<div class="shang">'+data[i].name+'</div>'+
+								'<div class="dianpu">'+data[i].merchant+'</div>'+
+								'<div class="he">'+
+									'<div class="jinqian">原价：'+data[i].money+'</div>'+
+									'<div class="yimai">销量：'+data[i].number+'</div>'+
+								'</div>'+
+							'</div>'
+					}
+					body.innerHTML = ty;
+					var re=document.querySelectorAll('.a')
+					for(var j=0;j<re.length;j++){
+						re[j].x=j;
+						re[j].onclick=function(){
+							var id = data[this.x].id;
+							console.log(id);
+							location.href = "05.html?id="+id;
+						}
+					}
+				}
+			});
+		}
+	</script>
+</html>

@@ -1,0 +1,88 @@
+*{
+	padding:0;
+	margin:0;
+}
+body{
+	background: #f9f9f9;
+}
+.zhu{
+	width:100%;
+	height:1000px;
+}
+.shen{
+	width:60%;
+	margin:10px auto;
+	height:500px;
+	background: white;
+	position: relative;
+}
+.tubiao{
+	width:8%;
+	margin:auto;
+}
+.tubiao img{
+	width:100%;
+}
+.shen p:nth-of-type(1){
+	width:100%;
+	text-align: center;
+	font-size: 35px;
+	margin:30px;
+}
+.shen input{
+	width:40%;
+	margin:10px 30%;
+	height:40px;
+	padding-left:2.5%;
+	outline: none;
+	box-sizing: border-box;
+}
+.shen input:nth-of-type(3){
+	width:20%;
+}
+.mi{
+	position:absolute;
+	top:300px;
+	right:240px;
+}
+.shen input:nth-of-type(4){
+	width:40%;
+	border:none;
+	outline: none;
+	background: #ff6700;
+	color:white;
+}
+.shen p:nth-of-type(2){
+	width:40%;
+	margin:5px 30%;
+	color:#ccc;
+	font-size: 14px;
+}
+.shang{
+	width:20%;
+	margin: 30px auto;
+	height: 20px;
+}
+.shang li{
+	list-style: none;
+	float: left;
+	padding-left:10px;
+	padding-right:10px;
+	border-right: 1px solid black;
+}
+.shang li:last-child{
+	border:none;
+}
+.di p{
+	text-align: center;
+}
+
+
+
+
+
+
+
+
+
+

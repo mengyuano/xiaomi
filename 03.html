@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.con {
+				width: 200px;
+				height: 40px;
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		商品名称<input class="name" type="text" value="" />
+		<br />
+		商品属性<input class="shuxing" type="text" value="" />
+		<br />
+		商品价格<input class="money" type="text" />
+		<br />
+		上传图片<input class="imgurl" type="file" />
+		<br />
+		商家姓名<input class="username" type="text" value="" />
+		<br />
+		商品销量<input class="number" type="text" value="" />
+		<br />
+		<input class="btn" type="button" value="添加商品" />
+		<div class="con"></div>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.js" ></script>
+	<script type="text/javascript">
+		var body = document.querySelector("body");
+		var name1 = document.querySelector(".name");
+		var shuxing1 = document.querySelector(".shuxing");
+		var money1 = document.querySelector(".money");
+		var imgurl1 = document.querySelector(".imgurl");
+		var username1 = document.querySelector(".username");
+		var num1 = document.querySelector(".number");
+		var btn = document.querySelector(".btn");
+		var con = document.querySelector(".con");
+		body.onload = function(){
+			$.ajax({
+				type:"post",
+				url:"js/00session.php",
+				dataType:"json",
+				async:true,
+				success:function(data){
+					console.log(data);
+					if(data=="请登录"){
+						con.innerHTML = "请登录";
+					}else {
+						con.innerHTML = data;
+					}
+				}
+			});
+		}
+		btn.onclick = function(){
+			var name = name1.value;
+			var shuxing = shuxing1.value;
+			var money = money1.value;
+			var imgurl = imgurl1.files[0];
+			var username = username1.value;
+			var num = num1.value;
+			var form = new FormData();
+			form.append("name",name);
+			form.append("shuxing",shuxing);
+			form.append("money",money);
+			form.append("imgurl",imgurl);
+			form.append("username",username);
+			form.append("num",num);
+			
+	 		$.ajax({
+				type:"post",
+				url:"js/03tianjia.php",
+				dataType:"json",
+				contentType:false,
+				processData:false,
+				data:form,
+				async:true,
+				success:function(data){
+					console.log(data);
+					alert(data.info);
+				}
+			});
+		}
+	</script>
+</html>

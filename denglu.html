@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/denglu.css" />
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+	</head>
+	<body>
+		<div class="deng">
+			<div class="biao"><img src="img/51.png"></div>
+			<div class="kuang">
+				<div class="biaodan">
+					<div class="denglu">
+						<P>账号登录</P>
+						<P style="border:none;">扫码登录</P>
+					</div>
+					<form>
+						<input type="text" class="ming" placeholder="邮箱/手机号码/小米账号" 
+							value="" name='a'/>
+							<span class="span1"></span>
+						<input type="password" class="name" placeholder="密码"
+							 value="" name='b'/>
+							 <span class="span2"></span>
+						<div class="na">
+                                                                         立即登录
+						</div>
+					</form>
+					<div class="wangji">
+						<p><a href="">注册小米账号</a></p>
+						<p><a href="">忘记密码?</a></p>
+					</div>
+					<img src="img/52.png">
+				</div>
+				
+				
+				<div class="biaodan">
+					<div class="denglu">
+						<P>账号登录</P>
+						<P style="border:none;">扫码登录</P>
+					</div>
+					<div class="tu">
+						<img src="img/53.png">
+					</div>
+					<p>使用<span style="color:#f56600;">小米商城APP</span>扫一扫</p>
+					<p>请打开「设置 > 小米帐号 > 右上角扫一扫」扫码登录</p>
+				</div>
+			</div>
+			<div class="di">
+				<div class="bo">
+					<li>简体</li>
+					<li>繁体</li>
+					<li>English</li>
+					<li style="border:none;">常见问题</li>
+				</div>
+				<p>小米公司版权所有-京ICP备10046444-京公网安备11010802020134号-京ICP证110507号</p>
+			</div>
+		</div>
+	</body>
+	<script>
+		$('.denglu p').click(function(){
+			$('.biaodan').css('display','none')
+			.eq($(this).index()).css('display','block');
+		})
+		var ipt1=document.querySelector('.ming');
+		var ipt2=document.querySelector('.name');
+		var ipt3=document.querySelector('.na');
+		var ipt4=document.querySelector('.span1');
+		var ipt5=document.querySelector('.span2');
+		
+		ipt1.onchange = function(){
+			var user = ipt1.value;
+			$.ajax({
+				type:"post",
+				url:"js/01denglu0.php",
+				dataType:"json",
+				data:{
+					user:user
+				},
+				async:true,
+				success:function(data){
+					console.log(data);
+					if(data.status==1){
+						ipt4.innerHTML = data.info;
+						ipt4.style.color = "green";
+					}
+					if(data.status==2){
+						ipt4.innerHTML = data.info;
+						ipt4.style.color = "green";
+					}
+				}
+			});
+		}
+		
+		ipt3.onclick = function(){
+			var user = ipt1.value;
+			var pswd = ipt2.value;
+			$.ajax({
+				type:"post",
+				url:"js/01denglu1.php",
+				dataType:"json",
+				data:{
+					user:user,
+					pswd:pswd,
+					is_checked:1
+				},
+				async:true,
+				success:function(data){
+					console.log(data);
+					if(data.status==1){
+						ipt5.innerHTML = data.info;
+						ipt5.style.color = "green";
+						location.href='top.html';
+					}else{
+						ipt5.innerHTML = data.info;
+						ipt5.style.color = "green";
+					}
+				}
+			});
+		}
+//		ipt3.onclick=function(){
+//				if(ipt1.value==""||ipt2.value==""){
+//					alert('请输入账号及密码')
+//					return false;
+//				}else if(ipt1.value!='1234'){
+//					alert('亲，账号错误了哦')
+//					return false;
+//				}else if(ipt2.value!='1234'){
+//					alert('亲，密码错误了哦')
+//					return false;
+//				}else if(ipt1.value=="1234"||ipt2.value=="1234"){
+//					alert('登录成功')
+//					return true;
+//				}
+//		}
+	</script>
+</html>

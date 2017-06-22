@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/gouwuche.css" />
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+		<!--<script type="text/javascript" src="js/gouwuche.js" ></script>-->
+	</head>
+	<body>
+		<div class="we">
+			<div class="ju">
+				<div class="tu">
+					<div class="heng">
+						<a href="index.html">
+							<div class="tu1"><img src="img/1_07.jpg"></div>
+							<div class="tu1"><img src="img/1_07.jpg"></div>
+						</a>
+					</div>
+				</div>
+				<h1>我的购物车</h1>
+				<p>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
+				<div class="you">
+					<li>寂寞年代^_^</li>
+					<li>我的订单</li>
+				</div>
+			</div>
+		</div>
+		<div class="zhu">
+			<div class="zhong">
+				<div class="kuang">
+					<input type="checkbox" checked="checked"/>
+					<li>商品名称</li>
+					<li>单价</li>
+					<li>数量</li>
+					<li>小计</li>
+					<li>操作</li>
+				</div>
+				<div class="zhong1">
+					
+				</div>
+				<!--<div class="kuang1">
+					<input type="checkbox" checked="checked"/>
+					<li>小米手环</li>
+					<li class="shu0">149元</li>
+					<li>
+						<div class="shu">
+							<div class="shu1">-</div>
+							<div class="shu2">1</div>
+							<div class="shu3">+</div>
+						</div>
+					</li>
+					<li class="shu4">149元</li>
+					<li class="tew"><p>×</p></li>
+				</div>-->
+				<div class="dingwei">
+					<div class="jie">
+						<div class="ji">继续购物</div>
+						<span class="span1"></span>
+						<span class="span2"></span>
+						<div class="you1">去结算</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="di"><img src="img/37.png"></div>
+	</body>
+	<script>
+		var body=document.querySelector('body');
+		body.onload=function(){
+			$.ajax({
+				type:"post",
+				url:"js/06car0.php",
+				dataType:'json',
+				async:true,
+				success:function(data){
+					var str='';
+					var se=document.querySelector('.zhong1')
+					for(var i=0;i<data.length;i++){
+						str+='<div class="kuang1">'+
+								'<input type="checkbox" checked/>'+
+								'<li>'+data[i].name+'</li>'+
+								'<li class="shu0">'+data[i].money+'元</li>'+
+								'<li>'+
+									'<div class="shu">'+
+										'<div class="shu1">-</div>'+
+										'<div class="shu2">'+data[i].num+'</div>'+
+										'<div class="shu3">+</div>'+
+									'</div>'+
+								'</li>'+
+								'<li class="shu4">'+data[i].money+'元</li>'+
+								'<li class="tew"><p>×</p></li>'+
+							'</div>'
+							
+					}
+					se.innerHTML=str;
+					
+				}
+			});
+		}
+		
+	</script>
+</html>
